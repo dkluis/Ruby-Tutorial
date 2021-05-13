@@ -4,7 +4,7 @@ public class RubyController : MonoBehaviour
 {
     public int maxHealth = 5;
     public int health { get { return currentHealth; } }
-    int currentHealth = 4;
+    int currentHealth;
 
     public float speed = 3.0f;
 
@@ -16,6 +16,7 @@ public class RubyController : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
         Debug.Log("Starting the game");
     }
 
